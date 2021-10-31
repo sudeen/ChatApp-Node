@@ -1,0 +1,31 @@
+{
+  "name": "chatapp-node",
+  "version": "1.0.0",
+  "description": "A chat application using Node, Mongo, Express, SocketIO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudeen/ChatApp-Node.git"
+  },
+  "keywords": [
+    "Node"
+  ],
+  "author": "Sudin Ranjitkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sudeen/ChatApp-Node/issues"
+  },
+  "homepage": "https://github.com/sudeen/ChatApp-Node#readme",
+  "dependencies": {
+    "async": "^3.2.2",
+    "body-parser": "^1.19.0",
+    "dependable": "^1.1.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-promise-router": "^4.1.0",
+    "lodash": "^4.17.21"
+  }
+}
