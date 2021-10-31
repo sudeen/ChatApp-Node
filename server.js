@@ -3,8 +3,9 @@ const body-parser = require("body-parser");
 const ejs = require("ejs");
 const http = require("http");
 const container = require("./container");
+const bodyParser = require("body-parser");
 
-container.resolve(function(){
+container.resolve(function(users){
     const app = SetupExpress();
 
     function SetupExpress(){
@@ -13,8 +14,21 @@ container.resolve(function(){
         server.listen(3000, function(){
             console.log("Listening on port 3000");
         });
+        ConfigureExpress(app);
+
+         // Setup Router
+    const router = require("express-promise-router")();
+    users.SetRouting(router);
+
+    app.use(router);
     }
 
-    // Setup Router
-    const router = require("express-promise-router")();
-})
+   
+
+    function ConfigureExpress(app){
+        app.use(express.static("public"));
+        app.set("view engine", "ejs");
+        app.use(bodyParser.json());
+        app.use(bodyParser.urlencoded({extended: true}));
+    }
+});
