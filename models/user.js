@@ -13,12 +13,12 @@ const userSchema = mongoose.Schema({
   googleTokens: Array,
 });
 
-userSchema.methods.encryptPassword = function (passowrd) {
-  return bcrypt.hashSync(passowrd, bcrypt.genSaltSync(10), null);
+userSchema.methods.encryptPassword = function (password) {
+  return bcrypt.hashSync(password, bcrypt.genSaltSync(10), null);
 };
 
-userSchema.methods.validUserPassowrd = function (password) {
-  return bcrypt.compareSync(password, this.passowrd);
+userSchema.methods.validUserPassword = function (password) {
+  return bcrypt.compareSync(password, this.password);
 };
 
 module.exports = mongoose.model("User", userSchema);
