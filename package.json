@@ -21,6 +21,7 @@
   "homepage": "https://github.com/sudeen/ChatApp-Node#readme",
   "dependencies": {
     "async": "^3.2.2",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^3.2.0",
