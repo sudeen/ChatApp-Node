@@ -75,6 +75,16 @@ integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/
                 Register
             </h1>
 
+            <% if(hasErrors) {%>
+                <div class="alert alert-danger text-center">
+
+                    <a href="#" class="close" data-dismis="alert" aria-label="close">&times;</a>
+                    <% _.forEach(messages, function(error) {%>  
+                        <%= error %> <br>
+                        <% }) %>
+                </div>
+            <% } %>
+
             <div class="inset">
                 <p>
                   <label for="username">USERNAME</label>
